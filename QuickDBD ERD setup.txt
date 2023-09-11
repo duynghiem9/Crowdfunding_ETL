@@ -1,0 +1,35 @@
+subcategory
+-
+subcategory_id varchar(10) PK
+subcategory varchar(40)
+
+category
+-
+category_id varchar(10) PK
+category varchar(40)
+
+contacts
+-
+contact_id pk int
+first_name varchar(40)
+last_name  varchar(40)
+email varchar(50)
+
+campaign
+-
+cf_id PK int
+contact_id int FK - contacts.contact_id
+company_name varchar(100)
+description varchar(256)
+goal float
+pledged float
+outcome varchar(40)
+backers_count int
+country varchar(10)
+currency varchar(10)
+launched_date DATE
+end_date DATE
+category_id varchar(40) FK - category.category_id
+subcategory_id varchar(40) FK - subcategory.subcategory_id
+
+
